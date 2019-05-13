@@ -3,11 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>jQuery - Reprograma</title>
 
 </head>
 
 <body>
+
+    <h1>Teste!</h1>
+    <p>Jquery</p>
 
     <button id="hide">Esconder</button>
     <button id="show">Mostrar</button>
@@ -16,12 +20,22 @@
 
     <p class="dois">Parágrafo com toggle.</p>
 
-    <button class="toggle">Toggle</button>
+    <button id="toggle">Toggle</button>
 
-    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
     <script>
         $(document).ready(function () {
-   
+            $('#hide').click(function() {
+                $('p').hide();
+            });
+            $('#show'). click (function(){
+                $('p').show();
+                $('#show').toggleClass("fundo");
+            });
+            $('#toggle').click(function(){
+                $('p').toggle();
+                $('#toggle').toggleClass("fundoVerde");
+            });
         });
     </script>
 </body>

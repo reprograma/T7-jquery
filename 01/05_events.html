@@ -3,28 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>jQuery - Reprograma</title>
 
 </head>
 
 <body>
 
-    <p>Clique aqui.</p>
-
-    <br> Name:
+    <p>Clique aqui.</p> 
+    <p>Name:</p>
     <input type="text" name="nome">
+    <input type="password" name="password" id="password">
 
-
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
     <script>
-        $("p").click(function () {
+        $("p").keypress(function () {
             alert("p clicado");
         });
 
         $(document).ready(function () {
-            $("input").focus(function () {
-                $(this).css("background-color", "#00a458");
+            $("input").focusin(function () {
+                $(this).addClass("fundoVerde");
+                $(this).removeClass("fundoVerde");
+            });
+            $("input").keypress(function () {
+                alert ("Digite reconhecido");
             });
         });
+
+
 
         // $("p").mouseenter(function() {
         //     alert("hello, it's me");
