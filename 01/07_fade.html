@@ -2,11 +2,13 @@
 <html>
 
 <head>
-    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
     <script>
         $(document).ready(function () {
             $("button").click(function () {
-      
+                $('#div1').fadeIn();
+                $('#div2').fadeOut("slow");
+                $('#div3').fadeToggle(2000);
 
             });
         });
@@ -23,7 +25,7 @@
 
     <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div>
     <br>
-    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div>
+    <div id="div2" style="width:80px;height:80px;background-color:green;"></div>
     <br>
     <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
 
