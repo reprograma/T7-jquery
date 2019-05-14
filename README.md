@@ -13,7 +13,8 @@ Nessa aula veremos alguns exercícios utilizando jQuery com comparação do java
 * [Vantagens](#vantagens)
 * [Como utilizar](#como-utilizar-?)
 * [Sintaxe](#sintaxe)
-* Exercícios
+* [Exercícios](#exercícios)
+* [Conteúdos adicionais](#conteúdos-adicionais)
 
 
 ## Aula 1
@@ -47,3 +48,112 @@ $(seletor).ação()
 $: acesso ao jQuery
 Seletor: para encontrar os elementos html
 Ação: o que eu quero realizar 
+
+Nessa aula vimos como utilizar os seletores( elemento, classe e id)
+
+``` $('li').text("Batata") ```
+
+``` $('.lista1 li').text() ```
+
+``` $('.lista1 > li').text("Batata") ```
+
+``` $('.lista1).find('li).text("Batata") ```
+
+Para visualizar a performance:
+https://jsperf.com/jquery-child-selector-vs-find/3
+
+
+E sobre os métodos de inicialização do jQuery nas nossas páginas:
+
+```     
+$(document).ready(function(){
+    //Código vai aqui
+});
+```
+
+E que a chamada acima equivale a 
+```     
+$(function(){
+    //Código vai aqui 
+})
+```
+
+Como adicionar e modificar attributos dos elementos utilizando .attr:
+
+``` $('a').attr('href', 'https://www.google.com.br'); ```
+
+Eventos de mouse e click:
+ex: double click
+```     
+$("p").dblclick(function(){
+    alert("p clicado");
+}) 
+```
+E vimos sobre on e one)
+
+On executará todas as vezes que 'mouseenter' ocorrer.
+```     
+$("p").on("mouseenter", function(){
+    alert("mouse no p");
+})
+```
+
+One executará apenas uma vez.
+```     
+$("p").one("mouseenter", function(){
+    alert("mouse no p");
+})
+```
+
+Show
+```
+$('#show').click(function(){
+    $('p').show();
+});
+
+```
+Hide
+```
+
+$('#hide').click(function(){
+    $('p').hide();
+});
+```
+
+Toggle
+```
+$('#toggle').click(function(){
+    $('.dois').toggle();
+});
+```
+FadeIn
+```
+$('#div1').fadeIn();
+```
+
+FadeOut
+```
+$('#div2').fadeOut("slow");
+```
+FadeToggle
+```
+$('#div3').fadeToggle(2000);
+```
+#### Exercícios
+ - Exemplos dados
+ - senha.html
+
+#### Conteúdos adicionais
+[Git flow - github](https://datasift.github.io/gitflow/IntroducingGitFlow.html)
+
+[Git flow - gitlab](https://docs.gitlab.com/ee/workflow/gitlab_flow.html)
+
+[Git flow - bitbucket](https://br.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+
+[RegEx101](https://regex101.com/r/MrUCVz/1)
+
+[RegEx - Livro](https://aurelio.net/regex/guia/)
+
+
+
+
