@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - Reprograma</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <input type="password" name="senha" id="senha" />
+    
+    <br>
+    <br>
+
+    <div id="forca">Força: </div>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+            $('#senha').keyup(function () {
+                var senha = $(this).val();
+
+               var forca = 0;
+               
+               if (senha.length > 4) {
+                   forca = forca + 25; //equivale a escrever forca += 25;
+               }
+
+               var regNumerico = new RegExp(/[0-9]/i);
+               if(regNumerico.test(senha)) {
+                   forca += 25;
+               }
+
+               var regCaractere = new RegExp(/[a-z]/i);
+               if(regCaractere.test(senha)) {
+                   forca += 25;
+               }
+
+               var regCaractereEspecial = new RegExp(/[^a-z0-9]/i);
+               if(regCaractereEspecial.test(senha)) {
+                   forca += 25;
+               }
+
+               var aceito = "Não";
+
+               if(forca >= 75) {
+                   aceito = "Sim";
+               }
+
+               if (forca >= 75) {
+                $(this).removeClass('fundoVermelho'); //o this refere-se a id senha da linha 24 (pois todo o codigo está dentro do codigo da linha 24)
+                $(this).addClass('fundoVerde');
+               } else {
+                $(this).removeClass('fundoVerde');
+                $(this).addClass('fundoVermelho');
+               }
+
+               //Outra resoluçao:
+               //aceito = (forca >= 75);
+               //$(this).toggleClass('fundoVerde', aceito);
+               //$(this).toggleClass('fundoVermelho', !aceito);
+
+            $('#forca').html("Força: " + forca + " - Senha: " + senha + " - Aceito: " + aceito);
+        });
+    });
+
+    </script>
+</body>
+
+</html>
