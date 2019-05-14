@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('#senha').keyup(function(){
         let senha = $(this).val();
         let forca = 0;
-        let aceito = "Não"
+        let aceito = false;
 
         if(senha.length > 4){
             forca += 25;
@@ -25,18 +25,14 @@ $(document).ready(function() {
             forca += 25;
         }
         
+        
         //Indicador de sucesso
-        if(forca >= 75){
-            $('input#senha').removeClass('erro');
-            $('input#senha').addClass('sucesso');
-            //variável para retorno de aceite.
-            aceito = "Sim"
-        }else{
+        aceito = (forca >= 75);
+        console.log(aceito);
 
-            $('input#senha').removeClass('sucesso');
-            $('input#senha').addClass('erro');
-        }
-
-        $('#forca').html(`Força:${forca} - Senha:${senha} - Aceito:${aceito}`);
+        $(this).toggleClass('sucesso', aceito);
+        $(this).toggleClass('erro', !aceito);
+    
+        $('#forca').html(`Força:${forca} - Senha:${senha} - Aceito:${ aceito ? "Sim" : "Não" }`);
     })
 });
