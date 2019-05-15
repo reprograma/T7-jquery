@@ -5,16 +5,20 @@ Turma 7 | Front-end | 2019 | Semana 10 | jQuery
 
 ---
 
-### [Aula 1](#aula-01)
+### [Aula 1](#aula-1)
 #### Resumo: 
 Nessa aula veremos alguns exercícios utilizando jQuery com comparação do javascript puro.
-* [O que é ?](#o-que-é-jquery)
+* [O que é ?](#o-que-é-jquery-?)
 * [Como surgiu ?](#como-surgiu-?)
 * [Vantagens](#vantagens)
 * [Como utilizar](#como-utilizar-?)
 * [Sintaxe](#sintaxe)
 * [Exercícios](#exercícios)
 * [Conteúdos adicionais](#conteúdos-adicionais)
+
+### [Aula 2](#aula-2)
+Nessa aula fizemos exercícios com conceitos aprendidos na aula anterior e aprendemos conceitos de animate.
+* [Animate](#animate)
 
 
 ## Aula 1
@@ -155,5 +159,35 @@ $('#div3').fadeToggle(2000);
 [RegEx - Livro](https://aurelio.net/regex/guia/)
 
 
+## Aula 2
 
+#### Animate
+Vimos o [animate](http://api.jquery.com/animate/) que segue o modelo 
+
+```
+$('elemento').animate();
+```
+
+Exemplo:
+```
+$('#animate').click(function(){
+    $('#content').animate(
+        { "width": "60%", "height": "200px"},
+        1000,
+        function(){
+            $(this).html("ANIMAÇÃO TERMINOU");
+        });
+});
+```
+
+Também utilizando scrollTop e offset:
+
+```
+$('html, body').animate({
+    scrollTop: $(hash).offset().top
+}, 3000, function(){
+    //Coloca na url do navegador
+    window.location.hash = hash;
+});
+```
 

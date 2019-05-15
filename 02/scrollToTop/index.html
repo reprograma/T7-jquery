@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        body,
+        html,
+        .main {
+            height: 100%;
+        }
+
+        section {
+            min-height: 100%;
+        }
+
+        .scrollToTop {
+            text-align: center;
+            font-weight: bold;
+            color: #444;
+            text-decoration: none;
+            position: fixed;
+            top: 100px;
+            right: 40px;
+            display: none;
+        }
+
+        .scrollToTop:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#section2">Seção 2</a>
+    <br>
+    <a href="#section3">Seção 3</a>
+    <div class="main">
+        <section></section>
+    </div>
+    <div class="main" id="section2">
+        <section style="background-color:blue"></section>
+    </div>
+    <div class="main" id="section3">
+        <section style="background-color:red"></section>
+    </div>
+
+    <a href="#" class="scrollToTop">Scroll To Top</a>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+</body>
+
+</html>
