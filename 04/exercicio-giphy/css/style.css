@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: #000;
+  color: #ec22f7;
+}
+
+.formulario {
+  width: 100vw;
+  border-bottom: solid 5px #f4cb42;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-campos {
+  width: 50vw;
+}
+
+.campos-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.campo-busca {
+  height: 30px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  width: 60%;
+  text-align: center;
+}
+
+.btn-busca {
+  height: 30px;
+  width: 20%;
+  color: white;
+  text-transform: uppercase;
+  background-color: #1a35cc;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-busca:hover {
+  background-color: #416fba;  
+}
+
+.area-gif {
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.gif {
+  padding: 5px;
+}
