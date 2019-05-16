@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     let qtdPalavras = $('.frase-correta').text().split(" ").length;
     $('.qtdPalavras').html(qtdPalavras);
 
