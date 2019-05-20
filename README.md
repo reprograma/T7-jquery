@@ -20,6 +20,9 @@ Nessa aula veremos alguns exercícios utilizando jQuery com comparação do java
 Nessa aula fizemos exercícios com conceitos aprendidos na aula anterior e aprendemos conceitos de animate.
 * [Animate](#animate)
 
+### [ Aula 3 e Aula 4](#aula-3)
+Na Aula 3 e 4 nós vimos sobre requisições utilizando $.ajax do jQuery, fazendo exercícios e com alguns conteúdos extras.
+
 
 ## Aula 1
 
@@ -284,3 +287,31 @@ $(document).ready(function(){
     $('#novaCarta').click(carregaCarta);
 });
 ```
+
+https://any-api.com/
+
+
+### Aula 4 
+Exercício giphy - 
+O exercício giphy foi retirado [desse repositorio](https://github.com/reprograma/js-semana2), aqui também é possível encontrar o exercício do twitter utilizando jQuery.
+Criamos nossa chave e utilizamos a [API da giphy](https://developers.giphy.com/), possível ver o exercício em 04/exercicio-giphy.
+
+
+Exercício tarot da pasta 04 foi utilizado um servidor local para rodar uma API e gerar o endpoint localhost:3000/cartas.
+Para rodar o servidor local é necessário ir para a pasta 
+
+*tarot/servidor* e rodar 
+
+``` npm install ``` 
+
+e depois 
+
+``` npm start ``` 
+
+Caso tenha algum problema com a porta 3000 é só modificar no arquivo server.js
+
+
+## Conteúdo extra
+
+-[Parallax](https://www.w3schools.com/howto/howto_css_parallax.asp)
+ 

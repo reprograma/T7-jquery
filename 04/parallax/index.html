@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet"> 
+
+    <script>
+        $(document).ready(function () {
+            $('div.bgParallax').each(function () {
+                var $obj = $(this);
+
+                $(window).scroll(function () {
+                    var yPos = -($(window).scrollTop() / $obj.data('speed'));
+
+                    var bgpos = '50% ' + yPos + 'px';
+
+                    $obj.css('background-position', bgpos);
+
+                });
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        /** formata elementos que tem backgrounds parallax **/
+
+        .bgParallax {
+            font-family: 'Ubuntu Condensed', sans-serif;
+            color: #FFF;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1920px;
+            position: relative;
+            min-height: 100%;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Define backgrounds dos divs */
+
+        #quemsomos {
+            background-image: url(img/001.jpg);
+        }
+
+        #missao {
+            background-image: url(./img/002.jpeg);
+            -webkit-box-shadow: -20px 0 20px 5px rgba(0, 0, 0, 0.7);
+            -moz-box-shadow: -20px 0 20px 5px rgba(0, 0, 0, 0.7);
+            -ms-box-shadow: -20px 0 20px 5px rgba(0, 0, 0, 0.7);
+            -o-box-shadow: -20px 0 20px 5px rgba(0, 0, 0, 0.7);
+            box-shadow: -20px 0 20px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /** Formata o article que vai o texto **/
+
+        .bgParallax article {
+            width: 70%;
+            text-align: center;
+            margin: 0 auto;
+            padding: 20% 0 0;
+        }
+
+        /** formata texto **/
+
+        article h1 {
+            font-size: 40px;
+        }
+
+        article p {
+            line-height: 30px;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+
+        article p a {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="quemsomos" class="bgParallax" data-speed="15">
+        <article>
+            <h1>Quem Somos.</h1>
+            <p>Lorem Ipsum.</p>
+        </article>
+    </div>
+    <div id="missao" class="bgParallax" data-speed="10">
+        <article>
+            <h1>Missão</h1>
+            <p>Lorem Ipsum</p>
+        </article>
+    </div>
+
+</body>
+
+</html>
